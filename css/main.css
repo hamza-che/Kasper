@@ -106,8 +106,16 @@ header .container nav ul li {
   text-transform: uppercase;
 }
 header .container nav ul li a {
+  padding-top: 1.63rem;
+  padding-bottom: 1.64rem;
   color: #fff;
   letter-spacing: 0.5px;
+}
+header .container nav ul li .active, header .container nav ul li a:hover {
+  border-bottom: 3px solid #06a6d0;
+  color: #06a6d0;
+  position: relative;
+  z-index: 2;
 }
 header .container nav form {
   flex-basis: 15%;

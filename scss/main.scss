@@ -1,13 +1,9 @@
-@import 'global-rules.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'madia-queries.scss';
+@import 'helpers/_global-rules.scss';
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
 
-body {
-    background-color: #000;
-}
 
-// Start Header
+/* Start Header */
 header {
     background: transparent;
     .container {
@@ -19,6 +15,10 @@ header {
         .logo img {
             height: 40px;
         }
+        .burger-menu {
+            color: #fff;
+            cursor: pointer;
+        }
         nav {
             flex: 1;
             @include flex-center();
@@ -29,14 +29,24 @@ header {
                 justify-content: space-between;
                 li {
                     text-transform: uppercase;
+                    margin-left: 1rem;
                     a {
+                        padding-top: 1.59rem;
+                        padding-bottom: 1.59rem;
                         color: #fff;
                         letter-spacing: .5px;
+                        transition: color .3s ease-in-out;
+                    }
+                    .active, a:hover {
+                        border-bottom: 2px solid $main-color;
+                        color: $main-color;
+                        position: relative;
+                        z-index: 2;
                     }
                 }
             }
             form {
-                flex-basis: 15%;
+                flex-basis: 12%;
                 text-align: right;
                 position: relative;
                 input {
@@ -44,13 +54,16 @@ header {
                     margin-right: 0;
                     padding: .5rem;
                     border: none;
-                    border-left: 2px solid #726f71;
+                    border-left: 2px solid $secondary-color;
                     background-color: transparent;
+                    caret-color: $main-color;
+                    color: #fff;
                 }
                 i {
                     position: absolute;
                     right: 7px;
-                    top: 9px;
+                    top: 50%;
+                    transform: translateY(-50%);
                     color: #fff;
                 }
             }
@@ -62,8 +75,9 @@ header {
             left: 15px;
             height: 2px;
             width: calc(100% - 30px);
-            background-color: #726f71;
+            background-color: $secondary-color;
         }
     }
 }
-// End Header
+/* End Header */
+@import 'helpers/_madia-queries.scss';

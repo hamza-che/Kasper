@@ -1,0 +1,72 @@
+/* Mobile Screens */
+@media (max-width: 767px) {
+    header {
+        .burger-menu {
+            color: #fff;
+            @include transition();
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 15px;
+            width: calc(100% - 30px);
+            padding-bottom: 10px;
+            flex-direction: column;
+            background-color: #312f2f;
+            ul {
+                width: 100%;
+                flex-direction: column;
+                li {
+                    padding: 15px;
+                    width: 100%;
+                    a {
+                        padding: 0 !important;
+                        color: #fff;
+                        letter-spacing: .5px;
+                        transition: color .3s ease-in-out;
+                    }
+                    .active, a:hover {
+                        border: none !important;
+                    }
+                }
+            }
+            form {
+                width: 100%;
+                text-align: center !important;
+                position: relative;
+                input {
+                    width: 95% !important;
+                    border: 2px solid $secondary-color !important;
+                }
+                i {
+                    right: 25px !important;
+                }
+            }
+        }
+    }
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
