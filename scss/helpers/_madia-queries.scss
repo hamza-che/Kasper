@@ -9,13 +9,14 @@
             }
         }
         nav {
+            display: none !important;
             position: absolute;
             top: 100%;
             left: 15px;
             width: calc(100% - 30px);
             padding-bottom: 10px;
             flex-direction: column;
-            background-color: #312f2f;
+            background-color: rgba(#000000, .9);
             ul {
                 width: 100%;
                 flex-direction: column;
@@ -47,6 +48,21 @@
             }
         }
     }
+    .landing {
+        .intro {
+            .content {
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .right-arrow {
+            right: 10px;
+        }
+        .left-arrow {
+            left: 10px;
+        }
+    }
 }
 
 /* Small Screens */
@@ -56,6 +72,12 @@
     }
     .burger-menu {
         display: none;
+    }
+}
+@media (max-width: 991px) {
+    .intro {
+        width: 100% !important;
+        justify-content: center !important;
     }
 }
 /* Medium Screens */

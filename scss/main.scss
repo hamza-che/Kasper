@@ -5,7 +5,11 @@
 
 /* Start Header */
 header {
+    position: absolute;
+    left: 0;
+    width: 100%;
     background: transparent;
+    z-index: 5;
     .container {
         padding-top: 1.1rem;
         padding-bottom: 1.1rem;
@@ -80,4 +84,86 @@ header {
     }
 }
 /* End Header */
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url('../images/landing/landing1.jpg');
+    background-size: cover;
+    position: relative;
+    .intro {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 55%;
+        padding: 3rem;
+        background-color: rgba($main-color, .4);
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        .content {
+            max-width: 500px;
+            color: #fff;
+            h1 {
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+                font-weight: normal;
+                text-transform: uppercase;
+            }
+            p {
+                line-height: 1.8;
+            }
+        }
+    }
+    .arrow {
+        color:#fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 4;
+    }
+    .left-arrow {
+        left: 20px;
+    }
+    .right-arrow {
+        right: 20px;
+    }
+    .bullets {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        z-index: 4;
+        li {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            @include transition();
+        }
+        li.active,
+        li:hover {
+            background-color: $main-color;
+            border-color: $main-color;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .7)
+    }
+}
+/* End Landing */
+
 @import 'helpers/_madia-queries.scss';
