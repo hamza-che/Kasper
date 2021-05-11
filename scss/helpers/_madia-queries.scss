@@ -56,11 +56,20 @@
                 }
             }
         }
-        .right-arrow {
-            right: 10px;
+        .arrow {
+            display: none;
         }
-        .left-arrow {
-            left: 10px;
+    }
+    .services {
+        text-align: center;
+        .services-box {
+            // gap: 3rem 0 !important;
+            .service {
+                flex-direction: column;
+                i {
+                    margin: 0 0 1.5rem !important;
+                }
+            }
         }
     }
 }
@@ -72,6 +81,15 @@
     }
     .burger-menu {
         display: none;
+    }
+    .services-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 3rem 4rem;
+        .service {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 @media (max-width: 991px) {
