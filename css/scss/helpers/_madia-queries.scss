@@ -1,3 +1,16 @@
+/* XS Screens */
+@media (max-width: 350px) {
+    .portfolio {
+        .portfolio-items {
+            .tabs {
+                li {
+                    padding: 5px !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}
 /* Mobile Screens */
 @media (max-width: 767px) {
     header {
@@ -93,6 +106,29 @@
             }
         }
     }
+    .stats {
+        .stats-box {
+            .stat {
+                flex-basis: 100%;
+            }
+        }
+    }
+    .our-skills {
+        .container {
+            .testimonials {
+                margin-bottom: 7rem;
+                .testims {
+                    .testim {
+                        flex-direction: column;
+                        text-align: center;
+                        .image {
+                            margin: 0 auto 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Small Screens */
@@ -105,11 +141,18 @@
     }
     .services-box {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 3rem 4rem;
         .service {
             display: flex;
             justify-content: space-between;
+        }
+    }
+    .stats {
+        .stats-box {
+            .stat {
+                flex-basis: 50%;
+            }
         }
     }
 }
@@ -118,11 +161,40 @@
         width: 100% !important;
         justify-content: center !important;
     }
+    .our-skills {
+        .container {
+            flex-direction: column;
+            .testimonials {
+                margin-bottom: 7rem;
+                .testims {
+                    .testim {
+                        .image {
+                            flex-basis: 35% !important;
+                            img {
+                                width: 120px !important;
+                                height: 120px !important;
+                            }
+                        }
+                        .text {
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 /* Medium Screens */
 @media (min-width: 992px) {
     .container {
         width: 970px;
+    }
+    .stats {
+        .stats-box {
+            .stat {
+                flex-basis: 25%;
+            }
+        }
     }
 }
 /* Large Screens */

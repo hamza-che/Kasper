@@ -150,13 +150,7 @@ header {
         }
     }
     &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: #000000, $alpha: .7)
+        @include overlay;
     }
 }
 /* End Landing */
@@ -196,13 +190,7 @@ header {
     position: relative;
     overflow: hidden;
     &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: #000000, $alpha: .7)
+        @include overlay;
     }
     .design-img,
     .design-text {
@@ -267,7 +255,7 @@ header {
         }
         .images {
             display: grid;
-            grid-template-columns: repeat(auto-fill ,minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             .img-box {
                 overflow: hidden;
                 position: relative;
@@ -312,13 +300,7 @@ header {
 .video {
     position: relative;
     &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(#000000, .6);
+        @include overlay;
     }
     video {
         width: 100%;
@@ -348,3 +330,174 @@ header {
     }
 }
 /* End Video */
+
+/* Start About us */
+.about-us {
+    padding-top: $section-padding;
+    text-align: center;
+    overflow: hidden;
+    img {
+        position: relative;
+        bottom: -100px;
+        margin-top: -100px;
+        max-width: 100%;
+    }
+}
+/* End About us */
+
+/* Start Stats */
+.stats {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    background-image: url('../../../images/stats.jpg');
+    position: relative;
+    &::after {
+        @include overlay;
+    }
+    .stats-box {
+        // padding: 3rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: rgba($main-color, .7);
+        position: relative;
+        z-index: 2;
+        .stat {
+            padding: 3rem;
+            color: #fff;
+            .icon {
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                margin: 0 auto;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+                color: #FFF;
+            }
+            h3 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-size: 4rem;
+            }
+        }
+    }
+}
+/* End Stats */
+
+/* Start Skills and Testimonials */
+.our-skills {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    .container {
+        display: flex;
+        column-gap: 4rem;
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            h3 {
+                font-size: 2rem;
+                font-weight: normal;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+            }
+            p {
+                line-height: 1.7;
+                color: $p-color;
+            }
+        }
+        .testimonials {
+            position: relative;
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                .testims {
+                    display: flex;
+                    flex-direction: column;
+                    display: none;
+                    .testim {
+                        display: flex;
+                        margin-bottom: 3rem;
+                        .image {
+                            flex-basis: 60%;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .text {
+                            p {
+                                line-height: 1.7;
+                                margin-bottom: 1rem;
+                            }
+                            span {
+                                display: flex;
+                                justify-content: flex-end;
+                                margin-bottom: 1rem;
+                                color: $p-color;
+                            }
+                        }
+                    }
+                }
+                .testims.active {
+                    display: flex;
+                }
+            }
+            .bullets {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-between;
+                z-index: 4;
+                li {
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    border: 1px solid $p-color;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    @include transition();
+                }
+                li.active,
+                li:hover {
+                    background-color: $main-color;
+                    border-color: $main-color;
+                }
+            }
+        }
+        .skills {
+            .progress {
+                .prog {
+                    .tech {
+                        display: block;
+                        margin-bottom: .5rem;
+                    }
+                    .prog-container {
+                        height: 2rem;
+                        background-color: #e0e0e0;
+                        .percentage {
+                            display: block;
+                            height: 100%;
+                            background-color: $main-color;
+                        }
+                    }
+                }
+                .prog:not(:last-of-type) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+/* End Skills and Testimonials */
