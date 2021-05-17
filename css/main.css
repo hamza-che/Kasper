@@ -818,6 +818,48 @@ header .container::after {
 }
 
 /* End Skills and Testimonials */
+/* Start Quote */
+.quote {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../../images/quote.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/quote.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.quote .container {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.quote .container q {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.quote .container q::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f10d';
+  font-weight: 900;
+  margin-right: 1rem;
+}
+
+.quote .container q::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f10e';
+  font-weight: 900;
+  margin-left: 1rem;
+}
+
+.quote .container span {
+  display: block;
+}
+
+/* End Quote */
 /* XS Screens */
 @media (max-width: 350px) {
   .portfolio .portfolio-items .tabs li {
