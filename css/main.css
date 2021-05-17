@@ -877,6 +877,7 @@ header .container::after {
 
 .pricing .options .option {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .pricing .options .option .head {
@@ -954,7 +955,7 @@ header .container::after {
 }
 
 .pricing .contact {
-  margin-top: 5rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -964,6 +965,85 @@ header .container::after {
 }
 
 /* End Pricing */
+/* Start Subscibe */
+.subscribe {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../../images/subscribe.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/subscribe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.subscribe .container .form {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+}
+
+.subscribe .container .form .input {
+  position: relative;
+}
+
+.subscribe .container .form .input input {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  caret-color: #06a6d0;
+}
+
+.subscribe .container .form .input input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.subscribe .container .form .input input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.subscribe .container .form .input input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.subscribe .container .form .input input::placeholder {
+  color: #fff;
+}
+
+.subscribe .container .form .input i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.subscribe .container .form .btn {
+  width: 30%;
+  position: absolute;
+  right: 1px;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.subscribe .container p {
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* End Subscibe */
 /* XS Screens */
 @media (max-width: 350px) {
   .portfolio .portfolio-items .tabs li {
@@ -1141,6 +1221,16 @@ header .container::after {
   .our-skills .container .testimonials .testims .testim .text {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .subscribe .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .subscribe .container .form {
+    margin-bottom: 2rem;
   }
 }
 

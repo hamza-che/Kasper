@@ -183,6 +183,15 @@
             }
         }
     }
+    .subscribe {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            .form {
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }
 /* Medium Screens */
 @media (min-width: 992px) {

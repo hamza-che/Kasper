@@ -548,6 +548,7 @@ header {
         column-gap: 2rem;
         .option {
             text-align: center;
+            margin-bottom: 4rem;
             .head {
                 padding: 1rem;
                 border-top: 1px solid $main-color;
@@ -614,7 +615,7 @@ header {
         }
     }
     .contact {
-        margin-top: 5rem;
+        margin-top: 1rem;
         text-align: center;
         p {
             margin-bottom: 2rem;
@@ -623,3 +624,54 @@ header {
     }
 }
 /* End Pricing */
+
+/* Start Subscibe */
+.subscribe {
+    @include section-padding();
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../../images/subscribe.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container {
+        position: relative;
+        display: flex;
+        column-gap: 2rem;
+        .form {
+            flex-basis: 50%;
+            position: relative;
+            .input {
+                position: relative;
+                input {
+                    width: 100%;
+                    padding: 1rem 2.5rem;
+                    background: transparent;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    caret-color: $main-color;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+                i {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #fff;
+                }
+            }
+            .btn {
+                width: 30%;
+                position: absolute;
+                right: 1px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+        p {
+            color: #fff;
+            line-height: 1.6;
+        }
+    }
+}
+/* End Subscibe */
