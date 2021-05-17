@@ -860,6 +860,110 @@ header .container::after {
 }
 
 /* End Quote */
+/* Start Pricing */
+.pricing {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.pricing .options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.pricing .options .option {
+  text-align: center;
+}
+
+.pricing .options .option .head {
+  padding: 1rem;
+  border-top: 1px solid #06a6d0;
+  border-bottom: 1px solid #06a6d0;
+}
+
+.pricing .options .option .head h3 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.pricing .options .option .head span {
+  font-weight: bold;
+  font-size: 4rem;
+  position: relative;
+}
+
+.pricing .options .option .head span::before {
+  content: '$';
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+.pricing .options .option .head span::after {
+  content: '/Mo';
+  position: absolute;
+  right: -3rem;
+  bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.pricing .options .option .features {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #06a6d0;
+}
+
+.pricing .options .option .features li {
+  padding: 1rem;
+  position: relative;
+}
+
+.pricing .options .option .features li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: #06a6d0;
+}
+
+.pricing .options .option .btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #06a6d0;
+  text-transform: capitalize;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.pricing .options .option .btn:hover {
+  background-color: #06a6d0;
+}
+
+.pricing .options .option .btn:hover a {
+  color: #fff;
+}
+
+.pricing .contact {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.pricing .contact p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+/* End Pricing */
 /* XS Screens */
 @media (max-width: 350px) {
   .portfolio .portfolio-items .tabs li {
