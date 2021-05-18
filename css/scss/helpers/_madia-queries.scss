@@ -10,6 +10,15 @@
             }
         }
     }
+    .contact-us {
+        .content {
+            .form {
+                .btn {
+                    width: 40% !important;
+                }
+            }
+        }
+    }
 }
 /* Mobile Screens */
 @media (max-width: 767px) {
@@ -126,6 +135,23 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .contact-us {
+        .content {
+            flex-direction: column;
+            text-align: center;
+            .form {
+                order: 2;
+                .btn {
+                    margin-right: auto;
+                    width: 30%;
+                }
+            }
+            .info {
+                order: 1;
+                margin-bottom: 2rem;
             }
         }
     }
