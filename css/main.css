@@ -900,7 +900,7 @@ header .container::after {
 }
 
 .pricing .options .option .head span::before {
-  content: '$';
+  content: attr(data-sign);
   position: absolute;
   left: -1.5rem;
   top: 0;
@@ -1054,6 +1054,9 @@ header .container::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 3rem;
           column-gap: 3rem;
 }
@@ -1108,6 +1111,7 @@ header .container::after {
   text-align: center;
   color: #fff;
   background-image: url("../../../images/subscribe.jpg");
+  background-size: cover;
   position: relative;
 }
 
@@ -1230,6 +1234,11 @@ header .container::after {
   }
   header nav form i {
     right: 25px !important;
+  }
+  header .open {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .landing .intro .content h1 {
     font-size: 1.7rem;

@@ -26,6 +26,7 @@ header {
                 flex-basis: 60%;
                 @include flex-center();
                 justify-content: space-between;
+                // display: none;
                 li {
                     text-transform: uppercase;
                     margin-left: 1rem;
@@ -157,8 +158,7 @@ header {
 
 /* Start Services */
 .services {
-    padding-top:$section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding();
     .services-box {
         .service {
             display: flex;
@@ -181,8 +181,7 @@ header {
 
 /* Start Design Section */
 .design {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding();
     background-image: url('../images/design-features2.jpg');
     background-size: cover;
     display: flex;
@@ -232,8 +231,7 @@ header {
 
 /* Start Portfolio */
 .portfolio {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding();
     .portfolio-items {
         display: flex;
         flex-direction: column;
@@ -347,9 +345,8 @@ header {
 
 /* Start Stats */
 .stats {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
-    background-image: url('../../../images/stats.jpg');
+    @include section-padding();
+    background-image: url('../images/stats.jpg');
     position: relative;
     &::after {
         @include overlay;
@@ -391,8 +388,7 @@ header {
 
 /* Start Skills and Testimonials */
 .our-skills {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding();
     .container {
         display: flex;
         column-gap: 4rem;
@@ -504,9 +500,8 @@ header {
 
 /* Start Quote */
 .quote {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../../images/quote.jpg');
+    @include section-padding();
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../images/quote.jpg');
     background-position: center;
     background-size: cover;
     .container {
@@ -540,8 +535,7 @@ header {
 
 /* Start Pricing */
 .pricing {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding();
     .options {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -564,7 +558,7 @@ header {
                     font-size: 4rem;
                     position: relative;
                     &::before {
-                        content: '$';
+                        content: attr(data-sign);
                         position: absolute;
                         left: -1.5rem;
                         top: 0;
@@ -628,7 +622,7 @@ header {
 /* Start Subscibe */
 .subscribe {
     @include section-padding();
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../../images/subscribe.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../images/subscribe.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -681,6 +675,7 @@ header {
     @include section-padding();
     .content {
         display: flex;
+        justify-content: space-between;
         column-gap: 3rem;
         .form {
             flex-basis: 70%;
@@ -727,7 +722,8 @@ header {
     padding-bottom: 2rem;
     text-align: center;
     color: #fff;
-    background-image: url('../../../images/subscribe.jpg');
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
     position: relative;
     &::after {
         @include overlay();
