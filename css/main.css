@@ -598,7 +598,7 @@ header .container::after {
 .stats {
   padding-top: 7rem;
   padding-bottom: 7rem;
-  background-image: url("../../../images/stats.jpg");
+  background-image: url("../images/stats.jpg");
   position: relative;
 }
 
@@ -822,8 +822,8 @@ header .container::after {
 .quote {
   padding-top: 7rem;
   padding-bottom: 7rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../../images/quote.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/quote.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/quote.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/quote.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -969,8 +969,8 @@ header .container::after {
 .subscribe {
   padding-top: 7rem;
   padding-bottom: 7rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../../images/subscribe.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/subscribe.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/subscribe.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/subscribe.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1110,7 +1110,7 @@ header .container::after {
   padding-bottom: 2rem;
   text-align: center;
   color: #fff;
-  background-image: url("../../../images/subscribe.jpg");
+  background-image: url("../images/subscribe.jpg");
   background-size: cover;
   position: relative;
 }
@@ -1190,7 +1190,7 @@ header .container::after {
             transform: rotate(90deg);
   }
   header nav {
-    display: none !important;
+    display: none;
     position: absolute;
     top: 100%;
     left: 15px;
