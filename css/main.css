@@ -170,6 +170,8 @@ header .container nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 header .container nav ul li {
@@ -198,6 +200,8 @@ header .container nav form {
       flex-basis: 12%;
   text-align: right;
   position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 header .container nav form input {
@@ -1190,7 +1194,7 @@ header .container::after {
             transform: rotate(90deg);
   }
   header nav {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 15px;

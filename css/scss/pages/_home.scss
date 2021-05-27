@@ -27,6 +27,7 @@ header {
                 @include flex-center();
                 justify-content: space-between;
                 // display: none;
+                @include transition();
                 li {
                     text-transform: uppercase;
                     margin-left: 1rem;
@@ -49,6 +50,7 @@ header {
                 flex-basis: 12%;
                 text-align: right;
                 position: relative;
+                @include transition();
                 input {
                     width: 40%;
                     margin-right: 0;
