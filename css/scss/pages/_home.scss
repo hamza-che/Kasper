@@ -89,6 +89,7 @@ header {
     background-image: url('../images/landing/landing1.jpg');
     background-size: cover;
     position: relative;
+    @include transition();
     .intro {
         position: absolute;
         left: 0;

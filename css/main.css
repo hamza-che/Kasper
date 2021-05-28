@@ -242,6 +242,8 @@ header .container::after {
   background-image: url("../images/landing/landing1.jpg");
   background-size: cover;
   position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .landing .intro {
