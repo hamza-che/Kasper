@@ -3,7 +3,9 @@ const navInput = document.querySelector('.nav form input[type="search"]');
 const landing = document.querySelector('.landing');
 const nextBtn = document.querySelector('.landing .next-btn');
 const prevBtn = document.querySelector('.landing .prev-btn');
-const bullets = document.querySelectorAll('.landing .bullets li');
+const landingBullets = document.querySelectorAll('.landing .bullets li');
+const shuffleBtns = document.querySelectorAll('.portfolio-items .tabs li');
+const portfolioItems = document.querySelectorAll('.portfolio-items .images .img-box');
 
 // Header Functionality
 toggleMenu.addEventListener('click', () => {
@@ -40,10 +42,30 @@ function previousImage() {
 	}
 }
 
-bullets.forEach((bullet) => {
+landingBullets.forEach((bullet) => {
 	bullet.onclick = function () {
 		landing.style.backgroundImage = `url('../images/landing/${bullet.dataset.slide}.jpg')`;
 		this.parentElement.querySelector('.active').classList.remove('active');
 		this.classList.add('active');
 	};
 });
+
+// Portfolio Functionality
+shuffleBtns.forEach((btn) => {
+	btn.addEventListener('click', portfolioShuffle);
+});
+
+function portfolioShuffle() {
+	this.parentElement.querySelector('.active').classList.remove('active');
+	this.classList.add('active');
+
+	if (this.dataset.shuffle === 'all') {
+		portfolioItems.forEach((item) => (item.style.display = 'grid'));
+	} else {
+		portfolioItems.forEach((item) => {
+			item.classList.contains(this.dataset.shuffle)
+				? (item.style.display = 'grid')
+				: (item.style.display = 'none');
+		});
+	}
+}
