@@ -25,10 +25,11 @@ function closeSearchBar() {
 	this.parentElement.parentElement.querySelector('ul').style.display = 'flex';
 }
 
-// Add Carousel Functionality
+// Carousel Functionality
 landingBullets.forEach((bullet) => {
 	bullet.onclick = function () {
-		landing.style.backgroundImage = `url('../images/landing/${this.dataset.slide}')`;
+		const backgroundImg = bullet.dataset.image;
+		landing.style.backgroundImage = 'url(../images/landing/' + backgroundImg + ')';
 		this.parentElement.querySelector('.active').classList.remove('active');
 		this.classList.add('active');
 	};
