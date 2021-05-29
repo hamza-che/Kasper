@@ -1,11 +1,11 @@
 const toggleMenu = document.querySelector('.burger-menu');
 const navInput = document.querySelector('.nav form input[type="search"]');
 const landing = document.querySelector('.landing');
-const nextBtn = document.querySelector('.landing .next-btn');
-const prevBtn = document.querySelector('.landing .prev-btn');
 const landingBullets = document.querySelectorAll('.landing .bullets li');
 const shuffleBtns = document.querySelectorAll('.portfolio-items .tabs li');
 const portfolioItems = document.querySelectorAll('.portfolio-items .images .img-box');
+const testimItems = document.querySelectorAll('.testimonials .testims');
+const testimBullets = document.querySelectorAll('.testimonials .bullets li');
 
 // Header Functionality
 toggleMenu.addEventListener('click', () => {
@@ -25,26 +25,9 @@ function closeSearchBar() {
 }
 
 // Add Carousel Functionality
-nextBtn.addEventListener('click', nextImage);
-prevBtn.addEventListener('click', previousImage);
-let slideCount = 1;
-
-function nextImage() {
-	landing.style.backgroundImage = `url('../images/landing/landing${slideCount++}.jpg')`;
-	if (slideCount > 3) {
-		slideCount = 1;
-	}
-}
-function previousImage() {
-	landing.style.backgroundImage = `url('../images/landing/landing${slideCount--}.jpg')`;
-	if (slideCount < 1) {
-		slideCount = 3;
-	}
-}
-
 landingBullets.forEach((bullet) => {
 	bullet.onclick = function () {
-		landing.style.backgroundImage = `url('../images/landing/${bullet.dataset.slide}.jpg')`;
+		landing.style.backgroundImage = `url('../images/landing/${this.dataset.slide}')`;
 		this.parentElement.querySelector('.active').classList.remove('active');
 		this.classList.add('active');
 	};
@@ -69,3 +52,15 @@ function portfolioShuffle() {
 		});
 	}
 }
+
+// Testimonilas Functionality
+testimBullets.forEach((bullet) => {
+	bullet.onclick = function () {
+		this.parentElement.querySelector('.active').classList.remove('active');
+		this.classList.add('active');
+
+		testimItems.forEach((item) => {
+			item.classList.contains(this.dataset.tabs) ? item.classList.add('active') : item.classList.remove('active');
+		});
+	};
+});
