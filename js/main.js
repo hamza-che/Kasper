@@ -1,3 +1,4 @@
+const navBar = document.querySelector('.nav');
 const toggleMenu = document.querySelector('.burger-menu');
 const navInput = document.querySelector('.nav form input[type="search"]');
 const landing = document.querySelector('.landing');
