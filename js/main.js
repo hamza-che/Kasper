@@ -6,6 +6,7 @@ const shuffleBtns = document.querySelectorAll('.portfolio-items .tabs li');
 const portfolioItems = document.querySelectorAll('.portfolio-items .images .img-box');
 const testimItems = document.querySelectorAll('.testimonials .testims');
 const testimBullets = document.querySelectorAll('.testimonials .bullets li');
+const toolTips = document.querySelectorAll('.skills .tooltip');
 
 // Header Functionality
 toggleMenu.addEventListener('click', () => {
@@ -63,4 +64,11 @@ testimBullets.forEach((bullet) => {
 			item.classList.contains(this.dataset.tabs) ? item.classList.add('active') : item.classList.remove('active');
 		});
 	};
+});
+
+toolTips.forEach((toolTip) => {
+	const percentage = toolTip.dataset.percent;
+	toolTip.innerHTML = `${percentage}%`;
+	toolTip.style.left = `${percentage}%`;
+	toolTip.parentElement.querySelector('.percentage').style.width = `${percentage}%`;
 });

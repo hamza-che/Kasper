@@ -804,6 +804,38 @@ header .container::after {
 
 .our-skills .container .skills .progress .prog .prog-container .tooltip {
   position: absolute;
+  top: -2.5rem;
+  left: 85%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .7rem;
+  z-index: 2;
+}
+
+.our-skills .container .skills .progress .prog .prog-container .tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000 transparent transparent transparent;
 }
 
 .our-skills .container .skills .progress .prog:not(:last-of-type) {
